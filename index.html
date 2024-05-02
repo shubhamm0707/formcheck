@@ -95,6 +95,7 @@ button:hover {
 
         <button type="submit">Submit</button>
     </form>
+    <button id="addField"> Add field</button>
 </div>
 
 <script>
@@ -112,6 +113,10 @@ document.getElementById("myForm").addEventListener("submit", function(event){
 
     // You can also perform other actions like sending data to server using AJAX
 });
+
+document.getElementById("addField").addEventListener("click", function(){
+    document.getElementById("myForm").appendChild(document.createElement("div")).innerHTML = '<div class="form-group"><label for="age">Age:</label><input type="number" id="age" name="age" required></div>';
+})
 </script>
 
 </body>
